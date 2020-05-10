@@ -1,25 +1,14 @@
 {
   "compilerOptions": {
+    "outDir": "lib",
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "declaration": false,
+    "jsx": "react",
+    "esModuleInterop": true
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src/ScrollToTop.tsx"]
 }

@@ -1,28 +1,34 @@
 {
   "name": "react-scroll-to-top",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.9.1",
-    "@types/node": "^12.12.38",
+  "author": "Herman Nygaard",
+  "version": "0.1.3",
+  "main": "lib/ScrollToTop.js",
+  "types": "lib/ScrollToTop.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "keywords": [
+    "react",
+    "top",
+    "scroll",
+    "scroll-to-top",
+    "scroll up"
+  ],
+  "devDependencies": {
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
     "typescript": "^3.7.5"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+  "peerDependencies": {
+    "react": "^16.8.0"
   },
   "browserslist": {
     "production": [
