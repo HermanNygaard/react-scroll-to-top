@@ -1,6 +1,7 @@
 # react-scroll-to-top
 
 A simple button component that scrolls to the top of the page when pressed\
+The button is only visible when a certain height has been reached on the page\
 Demo coming
 
 ## Installation
@@ -26,10 +27,11 @@ function CoolPage() {
 
 ## Props
 
-toTop number default 20
-color string color of the icon default black
-backgroundColor string color of the buttons background default white
-position: left, right
+| Prop    | Type   | Description                              | Default |
+| ------- | ------ | ---------------------------------------- | ------- |
+| top     | number | The height where the button gets visible | 20      |
+| color   | string | The arrow color                          | white   |
+| bgColor | string | Button background color                  | black   |
 
 ## Types
 

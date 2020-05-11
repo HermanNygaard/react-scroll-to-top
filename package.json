@@ -1,7 +1,7 @@
 {
   "name": "react-scroll-to-top",
   "author": "Herman Nygaard",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "lib/ScrollToTop.js",
   "types": "lib/ScrollToTop.d.ts",
   "scripts": {
@@ -20,6 +20,11 @@
     "scroll-to-top",
     "scroll up"
   ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HermanNygaard/react-scroll-to-top"
+  },
   "devDependencies": {
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
