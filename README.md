@@ -10,10 +10,12 @@ Run `npm i react-scroll-to-top`
 
 ## Usage
 
+Import the module and it's stylesheet\
 Include `<ScrollToTop />` anywhere in your render/return function:
 
 ```js
 import ScrollToTop from "react-scroll-to-top";
+import "react-scroll-to-top/lib/index.css"
 
 function CoolPage() {
   return (
@@ -27,11 +29,13 @@ function CoolPage() {
 
 ## Props
 
-| Prop    | Type   | Description                              | Default |
-| ------- | ------ | ---------------------------------------- | ------- |
-| top     | number | The height where the button gets visible | 20      |
-| color   | string | The arrow color                          | white   |
-| bgColor | string | Button background color                  | black   |
+| Prop      | Type   | Description                              | Default |
+| --------- | ------ | ---------------------------------------- | ------- |
+| top       | number | The height where the button gets visible | 20      |
+| color     | string | The arrow color                          | black   |
+| bgColor   | string | Button background color                  | white   |
+| className | string | Custom classname to add your own styling |         |
+| style     | Object | Object to override styling               |         |
 
 ## Types
 

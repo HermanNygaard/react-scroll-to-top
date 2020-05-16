@@ -1,11 +1,12 @@
 {
   "name": "react-scroll-to-top",
   "author": "Herman Nygaard",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "main": "lib/ScrollToTop.js",
   "types": "lib/ScrollToTop.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "tsnd --respawn src/ScrollToTop.tsx"
   },
   "files": [
     "lib/**/*"
@@ -30,6 +31,7 @@
     "@types/react-dom": "^16.9.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.7.5"
   },
   "peerDependencies": {
@@ -46,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@types/classnames": "^2.2.10"
   }
 }

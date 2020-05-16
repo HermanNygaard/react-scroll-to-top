@@ -1,0 +1,15 @@
+.scroll-to-top {
+    background-color: white;
+    right: 40px;
+    bottom: 40px;
+    position: fixed;
+    z-index: 2;
+    cursor: pointer;
+    margin-left: -50px;
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 40px;
+    transition: opacity .25s ease-in-out;
+    height: 40px;
+    box-shadow: 0 9px 25px 0 rgba(132,128,177,0.28);
+}
