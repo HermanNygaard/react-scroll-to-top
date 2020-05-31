@@ -2,7 +2,9 @@
 
 A simple button component that scrolls to the top of the page when pressed\
 The button is only visible when a certain height has been reached on the page\
-Demo coming
+
+## Live demo
+[Check out a live demo here](https://codesandbox.io/s/friendly-northcutt-rmuvx?file=/src/App.js)
 
 ## Installation
 
