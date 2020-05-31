@@ -6,7 +6,7 @@ Demo coming
 
 ## Installation
 
-Run `npm i react-scroll-to-top --save`
+Run `npm i react-scroll-to-top`
 
 ## Usage
 

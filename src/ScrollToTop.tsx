@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 type Props = {
   top?: number;
-  className?: string;
   color?: string;
   smooth?: boolean;
 };
