@@ -3,6 +3,8 @@
 A lightweight and customizable button component that scrolls to the top of a page when pressed\
 The button is only visible once a certain height has been reached on the page
 
+[![NPM](https://nodei.co/npm/react-scroll-to-top.png)](https://nodei.co/npm/react-scroll-to-top/)
+
 ## Live demo
 [A live demo can be found here](https://codesandbox.io/s/friendly-northcutt-rmuvx?file=/src/App.js)
 
@@ -22,7 +24,7 @@ import "react-scroll-to-top/lib/index.css"
 function CoolPage() {
   return (
     <div>
-      <ScrollToTop />
+      <ScrollToTop smooth />
       <h1>Hello, world!</h1>
     </div>
   );
