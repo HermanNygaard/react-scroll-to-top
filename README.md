@@ -6,7 +6,7 @@ Demo coming
 
 ## Installation
 
-Run `npm i react-scroll-to-top`
+Run `npm i react-scroll-to-top --save`
 
 ## Usage
 
@@ -29,13 +29,17 @@ function CoolPage() {
 
 ## Props
 
-| Prop      | Type   | Description                              | Default |
-| --------- | ------ | ---------------------------------------- | ------- |
-| top       | number | The height where the button gets visible | 20      |
-| color     | string | The arrow color                          | black   |
-| bgColor   | string | Button background color                  | white   |
-| className | string | Custom classname to add your own styling |         |
-| style     | Object | Object to override styling               |         |
+| Prop      | Type    | Description                              | Default |
+| --------- | ------- | ---------------------------------------- | ------- |
+| top       | number  | The height where the button gets visible | 20      |
+| color     | string  | The arrow color                          | black   |
+| bgColor   | string  | Button background color                  | white   |
+| className | string  | Custom classname to add your own styling | ''      |
+| style     | Object  | Object to override styling               |         |
+| smooth    | boolean | Whether to use smooth scrolling*         | false   |
+
+Smooth scrolling uses a newer `window.scrollTo` implementation.\
+[Check out its support in browsers at MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo).
 
 ## Types
 
