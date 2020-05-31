@@ -1,11 +1,11 @@
 {
   "name": "react-scroll-to-top",
   "author": "Herman Nygaard",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "main": "lib/ScrollToTop.js",
   "types": "lib/ScrollToTop.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc ; cp src/index.css lib/",
     "dev": "tsnd --respawn src/ScrollToTop.tsx"
   },
   "files": [
@@ -49,7 +49,5 @@
       "last 1 safari version"
     ]
   },
-  "dependencies": {
-    "@types/classnames": "^2.2.10"
-  }
+  "dependencies": {}
 }

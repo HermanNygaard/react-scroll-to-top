@@ -1,10 +1,10 @@
 # react-scroll-to-top
 
-A simple button component that scrolls to the top of the page when pressed\
-The button is only visible when a certain height has been reached on the page\
+A lightweight and customizable button component that scrolls to the top of a page when pressed\
+The button is only visible once a certain height has been reached on the page
 
 ## Live demo
-[Check out a live demo here](https://codesandbox.io/s/friendly-northcutt-rmuvx?file=/src/App.js)
+[A live demo can be found here](https://codesandbox.io/s/friendly-northcutt-rmuvx?file=/src/App.js)
 
 ## Installation
 
@@ -12,7 +12,7 @@ Run `npm i react-scroll-to-top`
 
 ## Usage
 
-Import the module and it's stylesheet\
+Import the component and the stylesheet\
 Include `<ScrollToTop />` anywhere in your render/return function:
 
 ```js
@@ -31,14 +31,13 @@ function CoolPage() {
 
 ## Props
 
-| Prop      | Type    | Description                              | Default |
-| --------- | ------- | ---------------------------------------- | ------- |
-| top       | number  | The height where the button gets visible | 20      |
-| color     | string  | The arrow color                          | black   |
-| bgColor   | string  | Button background color                  | white   |
-| className | string  | Custom classname to add your own styling | ''      |
-| style     | Object  | Object to override styling               |         |
-| smooth    | boolean | Whether to use smooth scrolling*         | false   |
+| Prop      | Type    | Description                            | Default |
+| --------- | ------- | -------------------------------------- | ------- |
+| smooth    | boolean | Whether to use smooth scrolling*       | false   |
+| className | string  | Classname to override styling          | ''      |
+| color     | string  | The arrow (SVG fill) color             | black   |
+| top       | number  | Height after page scroll to be visible | 20      |
+| style     | Object  | Object to override styling             |         |
 
 Smooth scrolling uses a newer `window.scrollTo` implementation.\
 [Check out its support in browsers at MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo).
