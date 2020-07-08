@@ -14,12 +14,11 @@ Run `npm i react-scroll-to-top`
 
 ## Usage
 
-Import the component and the stylesheet\
+Import the component  
 Include `<ScrollToTop />` anywhere in your render/return function:
 
 ```js
 import ScrollToTop from "react-scroll-to-top";
-import "react-scroll-to-top/lib/index.css"
 
 function CoolPage() {
   return (
@@ -36,7 +35,7 @@ function CoolPage() {
 | Prop      | Type    | Description                            | Default |
 | --------- | ------- | -------------------------------------- | ------- |
 | smooth    | boolean | Whether to use smooth scrolling*       | false   |
-| className | string  | Classname to override styling          | ''      |
+| className | string  | Classname to override styling          |         |
 | color     | string  | The arrow (SVG fill) color             | black   |
 | top       | number  | Height after page scroll to be visible | 20      |
 | style     | Object  | Object to override styling             |         |

@@ -1,0 +1,19 @@
+.scroll-to-top {
+    background-color: white;
+    right: 40px;
+    bottom: 40px;
+    position: fixed;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 7px;
+    width: 40px;
+    height: 40px;
+    transition: opacity 1s ease-in-out;
+    box-shadow: 0 9px 25px 0 rgba(132,128,177,0.28);
+    border: none;
+    outline: none;
+}
+
+.scroll-to-top:active {
+    transform: matrix(0.95, 0, 0, 0.95, 0, 0);
+}

@@ -2,16 +2,19 @@ import React, { useState, useEffect } from "react";
 
 type Props = {
   top?: number;
-  color?: string;
   smooth?: boolean;
 };
 
 function scrollToTop(smooth: boolean = false) {
   if (smooth) {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    try {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    } catch (e) {
+      document.documentElement.scrollTop = 0;
+    }
   } else {
     document.documentElement.scrollTop = 0;
   }
@@ -25,11 +28,12 @@ const ScrollToTop: React.FC<Props & React.HTMLAttributes<HTMLButtonElement>> = (
   ...props
 }) => {
   const [visible, setVisible] = useState(false);
+
   useEffect(() => {
     document.addEventListener("scroll", onScroll);
     // Remove listener on unmount
     return () => document.removeEventListener("scroll", onScroll);
-  });
+  }, []);
 
   const onScroll = () => {
     setVisible(document.documentElement.scrollTop > top);

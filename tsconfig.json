@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "lib",
     "module": "esnext",
     "target": "es5",
     "lib": [
@@ -23,7 +22,4 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },
-  "include": [
-    "src/ScrollToTop.tsx"
-  ]
 }
