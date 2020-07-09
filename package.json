@@ -1,15 +1,15 @@
 {
   "name": "react-scroll-to-top",
   "author": "Herman Nygaard",
-  "version": "0.2.4",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "rollup -c -w",
-    "build": "rm -rf dist ; rollup -c ; cp src/styles.css dist "
+    "build": "rm -rf dist ; rollup -c"
   },
   "files": [
-    "lib/**/*"
+    "dist"
   ],
   "eslintConfig": {
     "extends": "react-app"
@@ -31,14 +31,16 @@
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.7",
     "babel-core": "^6.26.3",
+    "@babel/core": "^7.10.4",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^3.1.2",
+    "rollup-plugin-scss": "^2.5.0",
+    "rollup-plugin-typescript": "^1.0.1",
     "babel-runtime": "^6.26.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
     "rollup": "^2.12.0",
-    "rollup-plugin-sass": "^1.2.2",
-    "rollup-plugin-typescript2": "^0.27.1",
-    "ts-node-dev": "^1.0.0-pre.44",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "tslib": "^2.0.0"
   },
   "peerDependencies": {
     "react": "^16.8.0"
@@ -54,13 +56,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "dependencies": {
-    "@babel/core": "^7.10.4",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-postcss": "^3.1.2",
-    "rollup-plugin-scss": "^2.5.0",
-    "rollup-plugin-typescript": "^1.0.1"
   }
 }

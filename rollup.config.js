@@ -1,4 +1,5 @@
 import babel from 'rollup-plugin-babel'
+import postcss from 'rollup-plugin-postcss'
 import typescript from '@rollup/plugin-typescript';
 
 import pkg from "./package.json";
@@ -14,6 +15,8 @@ export default {
       strict: false,
     },
   ],
-  plugins: [typescript(), babel()],
+  plugins: [typescript(), postcss({
+    modules: true
+  }), , babel()],
   external: ["react", "react-dom"],
 };
