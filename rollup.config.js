@@ -1,6 +1,6 @@
 import babel from 'rollup-plugin-babel'
 import postcss from 'rollup-plugin-postcss'
-import typescript from '@rollup/plugin-typescript';
+import typescript from 'rollup-plugin-typescript2'
 
 import pkg from "./package.json";
 
@@ -10,13 +10,12 @@ export default {
     {
       file: pkg.main,
       format: "cjs",
-      exports: "named",
       sourcemap: true,
-      strict: false,
     },
+
   ],
-  plugins: [typescript(), postcss({
+  plugins: [postcss({
     modules: true
-  }), , babel()],
+  }), , babel(), typescript()],
   external: ["react", "react-dom"],
 };
