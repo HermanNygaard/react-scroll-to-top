@@ -31,13 +31,15 @@ function CoolPage() {
 
 ## Props
 
-| Prop      | Type    | Description                              | Default |
-| --------- | ------- | ---------------------------------------- | ------- |
-| smooth    | boolean | Whether to use smooth scrolling*         | false   |
-| top       | number  | Height after page scroll to be visible   | 20      |
-| color     | string  | The arrow (SVG fill) color               | black   |
-| style     | Object  | Object to add/override styling           |         |
-| className | string  | Classname to completely override styling |         |
+| Prop      | Type    | Description                              | Default       |
+| --------- | ------- | ---------------------------------------- | ------------- |
+| smooth    | boolean | Whether to use smooth scrolling*         | false         |
+| top       | number  | Height after page scroll to be visible   | 20            |
+| color     | string  | The arrow (SVG fill) color               | "black"       |
+| svgPath   | string  | The SVG path d attribute                 | An arrow path |
+| viewBox   | string  | The SVG viewBox attribute                | "0 0 256 256" |
+| style     | Object  | Object to add/override styling           |               |
+| className | string  | Classname to completely override styling |               |
 
 Smooth scrolling uses a newer `window.scrollTo` implementation.\
 [Check out its support in browsers at MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo).
