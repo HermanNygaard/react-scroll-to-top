@@ -35,6 +35,7 @@ function CoolPage() {
 | --------- | ------- | ---------------------------------------- | ------------- |
 | smooth    | boolean | Whether to use smooth scrolling*         | false         |
 | top       | number  | Height after page scroll to be visible   | 20            |
+| component | any     | A custom component. See the examples     |               |
 | color     | string  | The arrow (SVG fill) color               | "black"       |
 | svgPath   | string  | The SVG path d attribute                 | An arrow path |
 | viewBox   | string  | The SVG viewBox attribute                | "0 0 256 256" |
@@ -43,6 +44,9 @@ function CoolPage() {
 
 Smooth scrolling uses a newer `window.scrollTo` implementation.\
 [Check out its support in browsers at MDN web docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo).
+
+## Examples  
+[With custom SVG component](https://codesandbox.io/s/react-scroll-to-top-custom-svg-or74g?file=/src/App.js)  
 
 ## Types
 
