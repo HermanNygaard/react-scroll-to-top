@@ -38,8 +38,8 @@ function CoolPage() {
 | top       | number  | Height after page scroll to be visible       | 20            |
 | color     | string  | The SVG icon fill color                      | "black"       |
 | svgPath   | string  | The SVG icon path d attribute                | An arrow path |
-| width     | string  | The SVG icon width                           | "19"          |
-| height    | string  | The SVG icon height                          | "19"          |
+| width     | string  | The SVG icon width                           | "28"          |
+| height    | string  | The SVG icon height                          | "28"          |
 | viewBox   | string  | The SVG icon viewBox attribute               | "0 0 256 256" |
 | component | any     | Component to override SVG icon. See examples |               |
 | style     | Object  | Object to add/override styling               |               |
