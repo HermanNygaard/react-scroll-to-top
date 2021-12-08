@@ -9,6 +9,8 @@ type Props = React.HTMLAttributes<HTMLButtonElement> & {
   svgPath?: string;
   viewBox?: string;
   component?: any;
+  width?: string;
+  height?: string;
 };
 
 function scrollToTop(smooth: boolean = false) {
