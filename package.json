@@ -58,7 +58,7 @@
     "typescript": "^3.7.5"
   },
   "peerDependencies": {
-    "react": "^16.8.0"
+    "react": "^16.8.0 || 17.x"
   },
   "browserslist": {
     "production": [
