@@ -1,7 +1,7 @@
 {
   "name": "react-scroll-to-top",
   "author": "Herman Nygaard",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -58,7 +58,7 @@
     "typescript": "^3.7.5"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || 17.x"
+    "react": "^16.8.0 || 17.x || ^18"
   },
   "browserslist": {
     "production": [
