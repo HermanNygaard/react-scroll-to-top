@@ -9,7 +9,9 @@
     "build": "rm -rf dist ; rollup -c",
     "lint": "eslint 'src/*.{js,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
-    "prettier:check": "prettier --check src"
+    "prettier:check": "prettier --check src",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "files": [
     "dist"
@@ -31,12 +33,22 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
-    "@types/react": "^16.9.34",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack4": "^6.5.9",
+    "@storybook/manager-webpack4": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "0.0.13",
+    "@types/react": "^16.14.28",
     "@types/react-dom": "^16.9.7",
     "@typescript-eslint/eslint-plugin": "^3.9.0",
     "@typescript-eslint/parser": "^3.9.0",
     "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
     "babel-runtime": "^6.26.0",
+    "chromatic": "^6.7.0",
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -45,9 +57,11 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "eslint-plugin-storybook": "^0.6.1",
     "prettier": "^2.0.5",
     "prettier-eslint": "^11.0.0",
-    "react": "^16.13.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "rollup": "^2.12.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
@@ -71,5 +85,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "dependencies": {}
 }
