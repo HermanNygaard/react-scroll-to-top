@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import ScrollToTop from "../../src";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,4 +34,23 @@ function App() {
   );
 }
 
-export default App;
+const Page = ({ children }) => (
+  <div style={{ height: "150vh" }}>{children}</div>
+);
+
+const OnMount = () => (
+  <Page>
+    <ScrollToTop top={0} />
+  </Page>
+);
+
+const Wrapper = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="onmount" element={<OnMount />} />
+    </Routes>
+  </BrowserRouter>
+);
+
+export default Wrapper;
