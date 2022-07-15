@@ -53,6 +53,7 @@ const ScrollToTop = ({
     <>
       {visible && (
         <button
+          aria-label="Scroll to top"
           className={`scroll-to-top ${className}`}
           onClick={() => scrollToTop(smooth)}
           // eslint-disable-next-line react/jsx-props-no-spreading

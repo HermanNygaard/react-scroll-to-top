@@ -1,6 +1,8 @@
 {
   "name": "react-scroll-to-top",
-  "author": "Herman Nygaard",
+  "author": {
+    "name": "Herman Nygaard"
+  },
   "version": "1.0.9",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +13,11 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier:check": "prettier --check src",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "chromatic --exit-zero-on-changes",
+    "playwright": "playwright test",
+    "start-example": "cd example && yarn dev",
+    "e2e": "start-server-and-test start-example http://localhost:5173 playwright"
   },
   "files": [
     "dist"
@@ -29,10 +35,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HermanNygaard/react-scroll-to-top"
+    "url": "git+https://github.com/HermanNygaard/react-scroll-to-top.git"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
+    "@playwright/test": "^1.23.3",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -68,6 +75,7 @@
     "rollup-plugin-postcss": "^3.1.2",
     "rollup-plugin-scss": "^2.5.0",
     "rollup-plugin-typescript2": "^0.27.1",
+    "start-server-and-test": "^1.14.0",
     "tslib": "^2.0.0",
     "typescript": "^3.7.5"
   },
@@ -86,5 +94,11 @@
       "last 1 safari version"
     ]
   },
-  "dependencies": {}
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/HermanNygaard/react-scroll-to-top/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/HermanNygaard/react-scroll-to-top#readme",
+  "_id": "react-scroll-to-top@1.0.9"
 }
