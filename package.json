@@ -16,7 +16,7 @@
     "build-storybook": "build-storybook",
     "chromatic": "chromatic --exit-zero-on-changes",
     "playwright": "playwright test",
-    "start-example": "cd example && yarn dev",
+    "start-example": "cd example && yarn && yarn dev",
     "e2e": "start-server-and-test start-example http://localhost:5173 playwright"
   },
   "files": [
