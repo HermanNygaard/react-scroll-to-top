@@ -11,11 +11,17 @@ The button is only visible once a certain height has been reached on the page
 
 ## Installation
 
-Run `npm i react-scroll-to-top`
+With npm:
+
+`npm i react-scroll-to-top`
+
+or with Yarn:
+
+`yarn add react-scroll-to-top`
 
 ## Usage
 
-Import and then include `<ScrollToTop />` anywhere in your render/return function:
+Import and then add `<ScrollToTop />` at the bottom of your return function (for a11y reasons):
 
 ```js
 import ScrollToTop from "react-scroll-to-top";
@@ -23,8 +29,9 @@ import ScrollToTop from "react-scroll-to-top";
 function CoolPage() {
   return (
     <div>
-      <ScrollToTop smooth />
       <h1>Hello, world!</h1>
+      <div style={{ marginTop: "150vh" }} />
+      <ScrollToTop smooth />
     </div>
   );
 }
