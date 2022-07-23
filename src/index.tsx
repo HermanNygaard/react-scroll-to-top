@@ -25,7 +25,7 @@ function scrollToTop(smooth: boolean = false) {
 
 const ScrollToTop = ({
   top = 20,
-  className = "scroll-to-top",
+  className = "",
   color = "black",
   smooth = false,
   component = "",
@@ -50,7 +50,7 @@ const ScrollToTop = ({
     <>
       {visible && (
         <button
-          className={className}
+          className={`scroll-to-top ${className}`}
           onClick={() => scrollToTop(smooth)}
           aria-label="Scroll to top"
           // eslint-disable-next-line react/jsx-props-no-spreading

@@ -41,7 +41,7 @@ test.skip("fixed position", async ({ page }) => {
   expect(scrollY).toEqual(0);
 });
 
-test("change style color", async ({ page }) => {
+test("style object override", async ({ page }) => {
   await page.goto("http://127.0.0.1:5173/style");
 
   const element = await page.waitForSelector('[aria-label="Scroll to top"]');
@@ -50,4 +50,15 @@ test("change style color", async ({ page }) => {
   });
 
   expect(color).toBe("rgb(0, 0, 255)");
+});
+
+test("classname override", async ({ page }) => {
+  await page.goto("http://127.0.0.1:5173/classname");
+
+  const element = await page.waitForSelector('[aria-label="Scroll to top"]');
+  const color = await element.evaluate((el) => {
+    return window.getComputedStyle(el).backgroundColor;
+  });
+
+  expect(color).toBe("rgb(255, 0, 0)");
 });

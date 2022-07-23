@@ -43,12 +43,19 @@ const StyleOverride = () => (
   </Page>
 );
 
+const ClassnameOverride = () => (
+  <Page>
+    <ScrollToTop top={0} className="override" />
+  </Page>
+);
+
 const Wrapper = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="onmount" element={<OnMount />} />
       <Route path="style" element={<StyleOverride />} />
+      <Route path="classname" element={<ClassnameOverride />} />
     </Routes>
   </BrowserRouter>
 );
