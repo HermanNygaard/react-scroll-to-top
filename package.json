@@ -11,7 +11,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier:check": "prettier --check src",
     "playwright": "playwright test",
-    "start-example": "cd example && npm i && npm run dev",
+    "start-example": "cd examples && npm i && npm run dev",
     "e2e": "start-server-and-test start-example http://localhost:5173 playwright"
   },
   "files": [
