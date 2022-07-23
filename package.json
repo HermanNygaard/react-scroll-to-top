@@ -1,7 +1,7 @@
 {
   "name": "react-scroll-to-top",
   "author": "Herman Nygaard",
-  "version": "1.0.9",
+  "version": "2.0.0-beta",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,7 +9,10 @@
     "build": "rm -rf dist ; rollup -c",
     "lint": "eslint 'src/*.{js,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
-    "prettier:check": "prettier --check src"
+    "prettier:check": "prettier --check src",
+    "playwright": "playwright test",
+    "start-example": "cd example && yarn && yarn dev",
+    "e2e": "start-server-and-test start-example http://localhost:5173 playwright"
   },
   "files": [
     "dist"
@@ -55,6 +58,7 @@
     "rollup-plugin-postcss": "^3.1.2",
     "rollup-plugin-scss": "^2.5.0",
     "rollup-plugin-typescript2": "^0.27.1",
+    "start-server-and-test": "^1.14.0",
     "tslib": "^2.0.0",
     "typescript": "^3.7.5"
   },

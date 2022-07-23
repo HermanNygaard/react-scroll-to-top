@@ -17,3 +17,6 @@
 .scroll-to-top:active {
   transform: matrix(0.95, 0, 0, 0.95, 0, 0);
 }
+.scroll-to-top:focus {
+  box-shadow: 0 0 0 1px black;
+}

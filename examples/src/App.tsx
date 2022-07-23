@@ -2,20 +2,16 @@ import React, { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import ScrollToTop from "../../src";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <div>
-        <img src="/vite.svg" className="logo" alt="Vite logo" />
-
-        <img src={reactLogo} className="logo react" alt="React logo" />
-      </div>
+      <ScrollToTop smooth />
+      <div style={{ marginTop: "150vh" }}></div>
       <h1>Vite + React</h1>
-      <ScrollToTop />
-
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -31,4 +27,23 @@ function App() {
   );
 }
 
-export default App;
+const Page = ({ children }) => (
+  <div style={{ height: "150vh" }}>{children}</div>
+);
+
+const OnMount = () => (
+  <Page>
+    <ScrollToTop top={0} />
+  </Page>
+);
+
+const Wrapper = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="onmount" element={<OnMount />} />
+    </Routes>
+  </BrowserRouter>
+);
+
+export default Wrapper;

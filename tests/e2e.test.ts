@@ -11,6 +11,17 @@ test("doesn't show before scrolled down", async ({ page }) => {
   //  expect(n).toBeFalsy();
 });
 
+test.skip("shows before scrolled if top < 0", async ({ page }) => {
+  await page.goto("http://127.0.0.1:5173/onmount");
+
+  const hidden = await page.locator('[aria-label="Scroll to top"]').isVisible();
+  expect(hidden).toBeTruthy();
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  const n = await page.locator('[aria-label="Scroll to top"]').isHidden();
+
+  //  expect(n).toBeFalsy();
+});
+
 test("happy path", async ({ page }) => {
   // Go to http://127.0.0.1:5173/
   await page.goto("http://127.0.0.1:5173/");
@@ -36,3 +47,5 @@ test.skip("fixed position", async ({ page }) => {
 
   expect(scrollY).toEqual(0);
 });
+
+test.skip("change style color", () => {});

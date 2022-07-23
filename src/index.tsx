@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-// @ts-ignore
-import styles from "./styles.css";
+import "./styles.css";
 
-type Props = React.HTMLAttributes<HTMLButtonElement> & {
+type Props = React.ComponentPropsWithoutRef<"button"> & {
   top?: number;
   smooth?: boolean;
   svgPath?: string;
@@ -26,7 +25,7 @@ function scrollToTop(smooth: boolean = false) {
 
 const ScrollToTop = ({
   top = 20,
-  className = styles["scroll-to-top"],
+  className = "scroll-to-top",
   color = "black",
   smooth = false,
 
@@ -53,6 +52,7 @@ const ScrollToTop = ({
         <button
           className={className}
           onClick={() => scrollToTop(smooth)}
+          aria-label="Scroll to top"
           // eslint-disable-next-line react/jsx-props-no-spreading
           {...props}
         >
