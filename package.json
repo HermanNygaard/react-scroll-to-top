@@ -1,7 +1,7 @@
 {
   "name": "react-scroll-to-top",
   "author": "Herman Nygaard",
-  "version": "2.0.0-beta",
+  "version": "2.0.3-beta.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -12,7 +12,8 @@
     "prettier:check": "prettier --check src",
     "playwright": "playwright test",
     "start-example": "cd examples && npm i && npm run dev",
-    "e2e": "start-server-and-test start-example http://localhost:5173 playwright"
+    "e2e": "start-server-and-test start-example http://localhost:5173 playwright",
+    "release": "npm run build && npm publish"
   },
   "files": [
     "dist"

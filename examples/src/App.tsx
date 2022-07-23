@@ -37,11 +37,18 @@ const OnMount = () => (
   </Page>
 );
 
+const StyleOverride = () => (
+  <Page>
+    <ScrollToTop top={0} style={{ backgroundColor: "blue" }} />
+  </Page>
+);
+
 const Wrapper = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="onmount" element={<OnMount />} />
+      <Route path="style" element={<StyleOverride />} />
     </Routes>
   </BrowserRouter>
 );

@@ -11,15 +11,11 @@ test("doesn't show before scrolled down", async ({ page }) => {
   //  expect(n).toBeFalsy();
 });
 
-test.skip("shows before scrolled if top < 0", async ({ page }) => {
+test("shows before scrolled if top < 0", async ({ page }) => {
   await page.goto("http://127.0.0.1:5173/onmount");
-
-  const hidden = await page.locator('[aria-label="Scroll to top"]').isVisible();
-  expect(hidden).toBeTruthy();
+  const button = await page.locator('[aria-label="Scroll to top"]').isVisible();
+  expect(button).toBeTruthy();
   await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-  const n = await page.locator('[aria-label="Scroll to top"]').isHidden();
-
-  //  expect(n).toBeFalsy();
 });
 
 test("happy path", async ({ page }) => {
@@ -31,12 +27,10 @@ test("happy path", async ({ page }) => {
   await page.locator('[aria-label="Scroll to top"]').click();
   await new Promise((r) => setTimeout(r, 1000));
   const scrollY = await page.evaluate(() => window.scrollY);
-
   expect(scrollY).toEqual(0);
 });
 
 test.skip("fixed position", async ({ page }) => {
-  // Go to http://127.0.0.1:5173/
   await page.goto("http://127.0.0.1:5173/");
 
   await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
@@ -44,8 +38,16 @@ test.skip("fixed position", async ({ page }) => {
   page.click("e", { position: { x: -40, y: -40 } });
   await new Promise((r) => setTimeout(r, 1000));
   const scrollY = await page.evaluate(() => window.scrollY);
-
   expect(scrollY).toEqual(0);
 });
 
-test.skip("change style color", () => {});
+test("change style color", async ({ page }) => {
+  await page.goto("http://127.0.0.1:5173/style");
+
+  const element = await page.waitForSelector('[aria-label="Scroll to top"]');
+  const color = await element.evaluate((el) => {
+    return window.getComputedStyle(el).backgroundColor;
+  });
+
+  expect(color).toBe("rgb(0, 0, 255)");
+});
