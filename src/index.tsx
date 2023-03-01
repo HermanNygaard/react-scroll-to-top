@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import useDelayUnmount from "./hooks/useDelayUnmount";
 import "./styles.css";
 
 type Props = React.ComponentPropsWithoutRef<"button"> & {
@@ -10,6 +10,8 @@ type Props = React.ComponentPropsWithoutRef<"button"> & {
   component?: any;
   width?: string;
   height?: string;
+  color?: string;
+  className?: string;
 };
 
 function scrollToTop(smooth: boolean = false) {
@@ -36,6 +38,7 @@ const ScrollToTop = ({
   ...props
 }: Props) => {
   const [visible, setVisible] = useState(false);
+  const shouldRender = useDelayUnmount({ isMount: visible, delay: 500 });
 
   useEffect(() => {
     const onScroll = () => {
@@ -48,9 +51,9 @@ const ScrollToTop = ({
 
   return (
     <>
-      {visible && (
+      {shouldRender && (
         <button
-          className={`scroll-to-top ${className}`}
+          className={`scroll-to-top ${className} ${visible ? "show" : "hide"}`}
           onClick={() => scrollToTop(smooth)}
           aria-label="Scroll to top"
           // eslint-disable-next-line react/jsx-props-no-spreading
