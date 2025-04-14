@@ -15,3 +15,24 @@
 .scroll-to-top:active {
   transform: matrix(0.95, 0, 0, 0.95, 0, 0);
 }
+
+.show{
+  animation-name: slideUp;
+  animation-duration: 1s;
+}
+
+.hide{
+  animation-name: slideDown;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideUp {
+  from {transform: matrix(0.95, 0, 0, 0.95, 100, 0);}
+  to {transform: matrix(0.95, 0, 0, 0.95, 0, 0);}
+}
+
+@keyframes slideDown {
+  from {transform: matrix(0.95, 0, 0, 0.95, 0, 0);}
+  to {transform: matrix(0.95, 0, 0, 0.95, 100, 0);}
+}
